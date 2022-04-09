@@ -1,5 +1,6 @@
 import IO
 import sys
+import Convert
 
 '''
 Chapter 3 Data Encryption Standard... (Class slide)
@@ -26,3 +27,6 @@ elif userInput[2] == 1:
 else:
 	print("WTF!!!")
 	print("Don't Hack me!!!")
+
+pt = Convert.hexToBin(pt)
+key = Convert.hexToBin(key)

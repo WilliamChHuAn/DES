@@ -11,19 +11,24 @@ References about error handling & cmd argument parser：
 # User-defined exceptions for option & argument error or help message
 class helpError(Exception):
 	
-	useHelp = '''--------------------------------------------------------
-| Please check README or use the command below         |
-| usage: py DES.py -h                                  |
---------------------------------------------------------
+	useHelp = '''------------------------------------------------------------------------
+| Please check README or use the command below         				   |
+| usage: py DES.py -h                                  				   |
+------------------------------------------------------------------------
 '''
 	
-	helpMessage = '''--------------------------------------------------------
-| If you want to ENCRYPT a message using DES Algorithm |
-| usage: py DES.py -e <plaintext> -k <8 bytes key>     |
-|                                                      |
-| If you want to DECRYPT a message using DES Algorithm |
-| usage: py DES.py -d <ciphertext> -k <8 bytes key>    |
---------------------------------------------------------
+	helpMessage = '''------------------------------------------------------------------------
+| If you want to ENCRYPT a message using DES Algorithm 				   |
+| usage: py DES.py -e <plaintext> -k <8 bytes key>     				   |
+|                                                     				   | 
+| If you want to DECRYPT a message using DES Algorithm 				   |
+| usage: py DES.py -d <ciphertext> -k <8 bytes key>   				   |
+|																	   |
+| This file will regard all of your input (text & key) as hexadecimal  |
+| i.e. key will be 16 digit											   |
+|																	   |
+| If this message still alert, you can open README.md for more details |
+------------------------------------------------------------------------
 '''
 
 # input plaintext or ciphertext that users want to encrypt or decrypt
@@ -49,10 +54,14 @@ def inputText(argv):
 		 	elif opt in ("-k", "--key"):
 		 		key = arg
 
+		key = key.upper()
 		textKey = [e, pt, d, ct, key]
 
 		# when e == True or d == True but e != d, and key was entered
-		if (e ^ d) and len(key) == 8:
+		if (e ^ d) and len(key) == 16:
+			for i in key:
+				if i not in "0123456789ABCDEF":
+					raise helpError
 			return textKey
 		else:
 			raise helpError()

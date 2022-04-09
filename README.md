@@ -17,7 +17,7 @@
 
 ## Details
 
-- Why only 8 bytes?
+- Key must be exactly 8 bytes 16 digits!!!
 	- Because I'm lazy. I don't want to write a padding function.
 - The above example command is for Windows. Please change by yourself if your environment is other OS.
 	- e.g. `python3 <...>`

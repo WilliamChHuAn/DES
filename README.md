@@ -13,7 +13,7 @@
 - If you want to ***DECRYPT*** a message using DES Algorithm
 	- usage: `py DES.py -d <ciphertext> -k <8 bytes key>`
 - This file will regard all of your input (text & key) as hexadecimal
-	- i.e. key will be 16 digit
+	- i.e. key must be 16 digit
 
 ## Details
 

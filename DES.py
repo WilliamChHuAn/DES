@@ -30,6 +30,7 @@ def Encryption(pt, key, debug, isFromDecryption):
 
 	roundKey = keyGen.getRoundKeys(keyC, keyD)
 
+	# if it is decryption, the round keys should be reverse
 	if isFromDecryption:
 		roundKey = roundKey[::-1]
 

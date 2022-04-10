@@ -54,6 +54,7 @@ def inputText(argv):
 		 	elif opt in ("-k", "--key"):
 		 		key = arg
 
+		# convert all letters to upper case
 		key = key.upper()
 		textKey = [e, pt, d, ct, key]
 
@@ -77,6 +78,20 @@ def inputText(argv):
 		print()
 		print(helpError.helpMessage)
 		os._exit(2)
+
+# output the encrypt or decrypt result
+# if flag == True represent it's encryption; otherwise it's decryption
+def outputText(flag, text):
+	print()
+	if flag == True:
+		print("After DES encrypt")
+		print("-----------------")
+		print("Ciphertext: ", end = "")
+	else:
+		print("After DES decrypt")
+		print("-----------------")
+		print("Plaintext: ", end = "")
+	print(text)
 
 # debug
 def test():

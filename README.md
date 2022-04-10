@@ -26,6 +26,7 @@
 	- e.g. `py DES.py -e 0123456789ABCDEG -k 0123456789AbcDEF` is invalid
 		- Because `G` in encrypt argument isn't a hexadecimal number
 - **ECB** mode & **Zero padding**
+	- This online tool can choose ECB & Zero padding, thus you can double check the result is correct or not
 
 ## Example
 

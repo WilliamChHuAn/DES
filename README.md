@@ -35,6 +35,9 @@
 	- Plaintext: `0123456789ABCDEF`
 	- Key: `0123456789ABCDEF`
 	```
+	After initial permutation: CC00CCFFF0AAF0AA
+	Round   i      Lpt       Rpt       round keys
+	----------------------------------------------
 	Round   1   F0AAF0AA   5E1CEC63   0B02679B49A5
 	Round   2   5E1CEC63   82E13C49   69A659256A26
 	Round   3   82E13C49   499542F9   45D48AB428D2

@@ -27,6 +27,7 @@
 		- Because `G` in encrypt argument isn't a hexadecimal number
 - **ECB** mode & **Zero padding**
 	- This online tool can choose ECB & Zero padding, thus you can double check the result is correct or not
+		- https://the-x.cn/en-US/cryptography/Des.aspx
 
 ## Example
 

@@ -1,6 +1,6 @@
 # Data Encryption Standard (DES)
 
-- To implement DES Algorithm in Python.
+- To implement DES lgorithm in Python.
 
 ##### tags: `110-2` `Dr. Shin-Ming Cheng`
 
